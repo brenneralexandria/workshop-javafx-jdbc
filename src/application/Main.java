@@ -16,12 +16,12 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/MainView.fxml"));
-			ScrollPane scrollpane = loader.load();
+			ScrollPane scrollPane = loader.load();
 			
-			scrollpane.setFitToHeight(true);
-			scrollpane.setFitToWidth(true);
+			scrollPane.setFitToHeight(true);
+			scrollPane.setFitToWidth(true);
 			
-			mainScene = new Scene(scrollpane);
+			mainScene = new Scene(scrollPane);
 			primaryStage.setScene(mainScene);
 			primaryStage.setTitle("Sample JavaFX application");
 			primaryStage.show();
@@ -29,11 +29,11 @@ public class Main extends Application {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public static Scene getMainScene() {
 		return mainScene;
 	}
-
+	
 	public static void main(String[] args) {
 		launch(args);
 	}
